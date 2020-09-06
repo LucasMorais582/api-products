@@ -15,5 +15,7 @@ class VerifyCsrfToken extends Middleware
         'stripe/*',
         'http://localhost:8000/category',
         'http://localhost:8000/category/*',
+        'http://localhost:8000/product',
+        'http://localhost:8000/product/*',
     ];
 }
