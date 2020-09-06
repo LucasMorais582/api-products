@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/status', 'CategoryController@status');
+
+Route::get('/category', 'CategoryController@list');
+Route::post('/category', 'CategoryController@store');
+Route::get('/category/{id}', 'CategoryController@show');
+Route::put('/category/{id}', 'CategoryController@update');
+Route::delete('/category/{id}', 'CategoryController@delete');
