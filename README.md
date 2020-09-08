@@ -29,7 +29,13 @@ git clone https://github.com/LucasMorais582/api-products.git
 
 ## Passos para inicializar a aplicação:
 
-Após entrar no diretório do projeto, realizar a criação das tabelas com o comando:
+Instalar todas as dependencias:
+```
+composer install
+```
+Criar o arquivo .env inspirado no .env.example e configurar as informaçes do banco
+
+Após entrar no diretório do projeto pelo terminal, realizar a criação das tabelas do banco com o comando:
 ```
 php artisan migrate
 ```
