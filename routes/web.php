@@ -29,4 +29,5 @@ Route::get('/product', 'ProductController@list');
 Route::post('/product', 'ProductController@store');
 Route::get('/product/{id}', 'ProductController@show');
 Route::patch('/product/{id}', 'ProductController@update');
+Route::post('/product/{id}/sendPhoto', 'ProductController@sendPhoto');
 Route::delete('/product/{id}', 'ProductController@delete');

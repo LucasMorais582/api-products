@@ -66,6 +66,34 @@ class ProductController extends Controller
         }
     }
 
+    public function sendPhoto(Request $request, $id){
+        try {
+            $product = Product::findOrFail($id);
+
+            $file = $request->file('file');
+            $imageFileType = $file->getClientOriginalExtension();
+            $extensions_arr = array("jpg","jpeg","png","gif");
+
+            // Check extension
+            if( in_array($imageFileType,$extensions_arr) ){
+                // Convert to base64
+                $image_base64 = base64_encode(file_get_contents($file) );
+                $product = Product::where('id', $id)->update(['image' => $image_base64]);
+            } else {
+                abort(400);
+            }
+
+            if($product) return ['product' => $id];
+
+            return abort(404);
+
+        } catch(\Exception $error) {
+            return Response::json([
+                'Response' => $error
+            ], 400);
+        }
+    }
+
     public function delete($id){
         try {
             $product = Product::findOrFail($id);
