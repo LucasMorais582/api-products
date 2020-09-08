@@ -40,6 +40,11 @@ Após entrar no diretório do projeto pelo terminal, realizar a criação das ta
 php artisan migrate
 ```
 
+Caso queira executar os testes automatizados:
+```
+./vendor/bin/phpunit
+```
+
 Inicializar a aplicação com o comando:
 ```
 php artisan serve
