@@ -18,16 +18,16 @@ Clonando o projeto
 git clone https://github.com/LucasMorais582/api-products.git
 ```
 
-# Pré-requisitos:
+## Pré-requisitos:
 - Primeiramente é necessário instalar o PHP, algumas de suas extensões e o Composer, todas as informações você encontra na documentação do [Laravel](https://laravel.com/docs/7.x/installation)
 
-# Banco de dados:
+## Banco de dados:
 - O primeiro passo é instalar o [Docker](https://docs.docker.com/engine/install/) na sua máquina
 - Em seguida, instalar a imagem do [Mysql](https://hub.docker.com/_/mysql). Caso nunca tenha utilizado o Mysql na sua máquina, é necessário criar seu login para ter acesso.
 - Criar um banco de dados com o nome: "api_products" ou com o nome que desejar, desde que altere também no .env. (Nesse passo, pode-se utilizar o phpAdmin ou algum programa como o [Dbeaver](https://dbeaver.io/) ou [Mysql Workbanch](https://www.mysql.com/products/workbench/) para realizar a conexão com a imagem).
 
 
-### Passos para inicializar a aplicação:
+## Passos para inicializar a aplicação:
 
 Após entrar no diretório do projeto, realizar a criação das tabelas com o comando:
 ```
